@@ -1,8 +1,8 @@
-import styles from './app.css';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import axios from 'axios';
+import List from './list.js';
 
-const App = React.createClass({
+const Board = React.createClass({
   getInitialState() {
       return ({visibleData: [], recentData: [], allTimeData: []})
   },
@@ -43,41 +43,11 @@ const App = React.createClass({
   },
   render() {
     return (
-      <div>          
+      <div>  
         <List data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
       </div>
     )
   }
 });
 
-const List = props => {
-  const rankedList = props.data.map((user, index) => {
-    return (
-        <tr>
-          <th>{index + 1}</th>
-          <th>
-            <a href={`www.freecodecamp.com/${user.username}`}>
-              <img src={user.img} style={{height: 25}}/>
-              {user.username}
-            </a>
-          </th>
-          <th>{user.recent}</th>
-          <th>{user.alltime}</th>
-        </tr>
-    )
-  });
-  return (
-    <table>
-      <tr>
-        <th>#</th>
-        <th>Camper Name</th>
-          <th onClick={props.lately}>Points in last 30 Days</th>
-          <th onClick={props.all}>All Time Points</th>
-        </tr>
-        {rankedList}
-      </table>
-    );
-  }
-  
-  ReactDOM.render(<App />, document.getElementById('app'));
-
+module.exports = Board;
