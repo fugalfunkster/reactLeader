@@ -43,7 +43,7 @@ const Board = React.createClass({
   },
   render() {
     return (
-      <div>  
+      <div className='board'>  
         <List data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
       </div>
     )

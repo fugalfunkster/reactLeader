@@ -4,27 +4,29 @@ const List = props => {
   const rankedList = props.data.map((user, index) => {
     return (
         <tr>
-          <th>{index + 1}</th>
-          <th>
+          <td>{index + 1}</td>
+          <td>
             <a href={`www.freecodecamp.com/${user.username}`}>
-              <img src={user.img} style={{height: 25}}/>
-              {user.username}
+              <img src={user.img} />
+              <p>{user.username}</p>
             </a>
-          </th>
-          <th>{user.recent}</th>
-          <th>{user.alltime}</th>
+          </td>
+          <td>{user.recent}</td>
+          <td>{user.alltime}</td>
         </tr>
     );
   });
   return (
     <table>
-      <tr>
+      <thead>
         <th>#</th>
         <th>Camper Name</th>
           <th onClick={props.lately}>Points in last 30 Days</th>
           <th onClick={props.all}>All Time Points</th>
-        </tr>
+        </thead>
+        <tbody>
         {rankedList}
+        </tbody>
       </table>
     );
   };
