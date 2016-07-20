@@ -1,0 +1,110 @@
+.list__active___23t22 {
+  background-color: lightgoldenrodyellow;
+}
+
+.list__inactive___1nbRV {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+table {
+ width: 100%;
+ border: 2px solid gray;
+ margin: 0 auto;
+ padding: .25em;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+  width: 5%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 20%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 30%;
+}
+
+th {
+  height: auto;
+  font-size: 2.5em;
+}
+
+thead:first-child {
+  background: white;
+  color: black;
+}
+
+th:nth-child(1) {
+  font-size: 5em;
+}
+
+th:nth-child(n+2) {
+  padding: 0.2em;
+}
+
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+
+tr {
+ padding: 0.25em;
+}
+
+td {
+  text-align: center;
+}
+
+td:nth-child(1) {
+  font-size: 2.5em;
+}
+
+
+td:nth-child(2) {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+td:nth-child(2) a { 
+  text-decoration: none;
+}
+
+td:nth-child(2) img { 
+  margin-top: 1em;
+  height: 7.5em;
+}
+
+td:nth-child(2) p { 
+  font-size: 2em;
+  margin: .25em;
+}
+
+td:nth-child(n+3) { 
+  font-size: 5em;
+  margin: .25em;
+}
+.board__board___2T4Mb {
+  width: 98%;
+  margin: 0 auto;
+  font-family: 'Goudy Old Style', serif;
+}
+
+@media (min-width: 37.5em) {
+  .board__board___2T4Mb {
+    width: 80%;
+    max-width: 1000px;
+  }
+}
+
+.board__head___2-nb5 {
+  width: 100%;
+  margin: .5em auto;
+  text-align: center;
+  font-size: 4em;
+}
+/*# sourceMappingURL=style.css.map*/
