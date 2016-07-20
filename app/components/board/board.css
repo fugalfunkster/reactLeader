@@ -1,0 +1,19 @@
+.board {
+  width: 98%;
+  margin: 0 auto;
+  font-family: 'Goudy Old Style', serif;
+}
+
+@media (min-width: 37.5em) {
+  .board {
+    width: 80%;
+    max-width: 1000px;
+  }
+}
+
+.head {
+  width: 100%;
+  margin: .5em auto;
+  text-align: center;
+  font-size: 4em;
+}

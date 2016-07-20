@@ -1,8 +1,7 @@
-import styles from './app.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Board from './components/board.js';
+import Board from './components/board/board.js';
 
 var element = document.createElement('div');
 element.id = "app";

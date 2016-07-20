@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import List from './list.js';
+import List from '../list/list.js';
+
+import styles from './board.css';
 
 const Board = React.createClass({
   getInitialState() {
@@ -43,8 +45,9 @@ const Board = React.createClass({
   },
   render() {
     return (
-      <div className='board'>  
-        <List data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
+      <div className={styles.board} >
+        <h1 className={styles.head}>FreeCodeCamp Leader Board</h1>
+        <List active={this.state.visibleData == this.state.allTimeData ? "all" : "recent" } data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
       </div>
     )
   }

@@ -1,13 +1,10 @@
-.board {
-  width: 98%;
-  margin: 0 auto;
-  font-family: 'Goudy Old Style', serif;
+.active {
+  background-color: lightgoldenrodyellow;
 }
 
-@media (min-width: 37.5em) {
-  .board {
-    width: 80%;
-  }
+.inactive {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 table {
@@ -22,10 +19,8 @@ td:nth-child(1) {
   width: 5%;
 }
 
-/* make below reactive */
 th:nth-child(3),
 td:nth-child(3) {
-  font-style: italic;
   width: 20%;
 }
 
@@ -85,7 +80,7 @@ td:nth-child(2) img {
 }
 
 td:nth-child(2) p { 
-  font-size: 2.5em;
+  font-size: 2em;
   margin: .25em;
 }
 
@@ -93,23 +88,3 @@ td:nth-child(n+3) {
   font-size: 5em;
   margin: .25em;
 }
-
-
-/*
-table tr th td a img
-
-.head
-
-.rank
-
-.camper
-
-.link
-
-.pic
-
-.recent
-
-.alltime
-
-*/
