@@ -6,9 +6,9 @@ import styles from './board.css';
 
 const Board = React.createClass({
   getInitialState() {
-      return ({visibleData: [], recentData: [], allTimeData: []})
+    return ({visibleData: [], recentData: [], allTimeData: []});
   },
-  componentDidMount() {
+  componentWillMount() {
     this.getAllTimeData();
   },
   getAllTimeData() {
@@ -17,14 +17,14 @@ const Board = React.createClass({
       axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/alltime')
       .then(function (r) {
         console.log(r);
-        that.setState({visibleData: r.data, allTimeData: r.data})
+        that.setState({visibleData: r.data, allTimeData: r.data});
       })
       .catch(function (r) {
         console.log(r);
-      })
+      });
     } else {
       const cache = this.state.allTimeData;
-      this.setState({visibleData: cache})
+      this.setState({visibleData: cache});
     }
   },
   getLatelyData() {
@@ -33,23 +33,23 @@ const Board = React.createClass({
       axios.get('https://fcctop100.herokuapp.com/api/fccusers/top/recent')
       .then(function (r) {
         console.log(r);
-        that.setState({visibleData: r.data, recentData: r.data})
+        that.setState({visibleData: r.data, recentData: r.data});
       })
       .catch(function (r) {
         console.log(r);
-      })
+      });
     } else {
       const cache = this.state.recentData;
-      this.setState({visibleData: cache})
+      this.setState({visibleData: cache});
     }
   },
   render() {
     return (
       <div className={styles.board} >
         <h1 className={styles.head}>FreeCodeCamp Leader Board</h1>
-        <List active={this.state.visibleData == this.state.allTimeData ? "all" : "recent" } data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
+        <List active={this.state.visibleData == this.state.allTimeData ? 'all' : 'recent' } data={this.state.visibleData} lately={this.getLatelyData} all={this.getAllTimeData} />
       </div>
-    )
+    );
   }
 });
 
